@@ -1,0 +1,35 @@
+import { router } from "expo-router";
+import { Pressable, Text, View } from "react-native";
+import { Appbar } from "react-native-paper";
+import styles from "./styles";
+
+export default function Layout({ children }) {
+
+    return (
+        <View style={{ flex: 1 }}>
+            {/*Barra superior*/}
+            <Appbar.Header style={styles.appBar}>
+                <Appbar.Content title="Music App"/>
+            </Appbar.Header>
+
+            {/* Contenido */}
+            <View  style={{ flex: 1 }}>{children}</View>
+
+            {/* Barra inferior */}
+            <View style={styles.layout}>
+                <Pressable onPress={() => router.push("/")}>
+                    <Text style={styles.title1}>Inicio</Text>
+                </Pressable>
+
+                <Pressable onPress={() => router.push("/search")}>
+                    <Text style={styles.title1}>Buscar</Text>
+                </Pressable>
+
+                <Pressable>
+                    <Text style={styles.title1}>Configuración</Text>
+                </Pressable>
+            </View>
+
+        </View>
+    );
+}

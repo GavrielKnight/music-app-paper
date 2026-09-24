@@ -1,0 +1,32 @@
+[
+    {
+        "id": 1,
+        "thumbnail": "icon.png",
+        "titulo": "Viva la Vida",
+        "artista": "Coldplay"
+    },
+    {
+        "id": 2,
+        "thumbnail": "icon.png",
+        "titulo": "Something About Us",
+        "artista": "Daft Punk"
+    },
+    {
+        "id": 3,
+        "thumbnail": "icon.png",
+        "titulo": "Locket",
+        "artista": "Crumb"
+    },
+    {
+        "id": 4,
+        "thumbnail": "icon.png",
+        "titulo": "Song1",
+        "artista": "Artist1"
+    },
+    {
+        "id": 5,
+        "thumbnail": "icon.png",
+        "titulo": "Song2",
+        "artista": "Artist2"
+    }
+]
