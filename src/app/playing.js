@@ -1,5 +1,7 @@
+import { MaterialCommunityIcons } from "@expo/vector-icons";
 import { useLocalSearchParams } from "expo-router";
-import { Image, Pressable, Text, View } from "react-native";
+import { Image, Text, View } from "react-native";
+import { IconButton } from "react-native-paper";
 
 import { imagenes } from "./imagenes.js";
 import Layout from "./layout.js";
@@ -31,19 +33,44 @@ export default function Playing() {
                         <Text style={styles.title1}>{song.titulo}</Text>
                         <Text style={styles.title2}>By {song.artista}</Text>
                     </View>
-                    <Image style={styles.icon} source={imagenes["heart-icon"]}/>
+                    <IconButton
+                        icon={() => (
+                            <MaterialCommunityIcons name="heart-outline" size={35}/>
+                        )}
+                    />
                 </View>
 
                 <View style={styles.horizontalBox}>
-                    <Pressable>
-                        <Image source={imagenes["prev-icon.png"]} style={styles.icon}/>
-                    </Pressable>
-                    <Pressable>
-                        <Image source={imagenes["play-icon.svg"]} style={styles.icon}/>
-                    </Pressable>
-                    <Pressable>
-                        <Image source={imagenes["next-icon.png"]} style={styles.icon}/>
-                    </Pressable>
+                    {/* Shuffle */}
+                    <IconButton
+                        icon={() => (
+                            <MaterialCommunityIcons name="shuffle" size={24}/>
+                        )}
+                    />
+                    {/*Previous*/}
+                    <IconButton
+                        icon={() => (
+                            <MaterialCommunityIcons name="skip-previous" size={35}/>
+                        )}
+                    />
+                    {/*Play*/}
+                    <IconButton
+                        icon={() => (
+                            <MaterialCommunityIcons name="play" size={35}/>
+                        )}
+                    />
+                    {/*Next*/}
+                    <IconButton
+                        icon={() => (
+                            <MaterialCommunityIcons name="skip-next" size={35}/>
+                        )}
+                    />
+                    {/*Repeat*/}
+                    <IconButton
+                        icon={() => (
+                            <MaterialCommunityIcons name="repeat" size={35}/>
+                        )}
+                    />
                 </View>
             </View>
         </Layout>

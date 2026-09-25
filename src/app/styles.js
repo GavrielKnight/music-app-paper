@@ -11,20 +11,15 @@ export default StyleSheet.create({
         paddingBottom: 10,
     },
 
-    layout: {
-        backgroundColor: "limegreen",
-        padding: 20,
-        flexDirection: "row",
-        alignItems: "center",
-        justifyContent: "space-evenly",
-    },
     appBar: {
         backgroundColor: "limegreen",
+        justifyContent: "space-evenly",
     },
 
     horizontalBox: {
         flexDirection: "row",
-        justifyContent: "space-evenly",
+        alignItems: "center",
+        justifyContent: "space-between",
         paddingBottom: 20,
     },
     scrollingBox: {
@@ -36,7 +31,8 @@ export default StyleSheet.create({
         backgroundColor: "lightgray",
         width: "50%",
         padding: 5,
-        margin: 10
+        margin: 10,
+        flex: 1,
     },
 
     card: {

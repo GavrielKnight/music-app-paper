@@ -16,7 +16,7 @@ export default function Layout({ children }) {
             <View  style={{ flex: 1 }}>{children}</View>
 
             {/* Barra inferior */}
-            <View style={styles.layout}>
+            <Appbar style={styles.appBar}>
                 <Pressable onPress={() => router.push("/")}>
                     <Text style={styles.title1}>Inicio</Text>
                 </Pressable>
@@ -28,8 +28,7 @@ export default function Layout({ children }) {
                 <Pressable>
                     <Text style={styles.title1}>Configuración</Text>
                 </Pressable>
-            </View>
-
+            </Appbar>
         </View>
     );
 }
